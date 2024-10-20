@@ -8,6 +8,7 @@ function App() {
   // function change(color){
   //   setColor(color)
   // }
+  //Hi
   return (
     <>
     <div className='w-full h-screen duration-200' style={{backgroundColor: color}}>

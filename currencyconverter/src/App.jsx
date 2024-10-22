@@ -6,8 +6,8 @@ import Inputdiv from './components/inputdiv'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
 
 function App() {
-  const [amount, setAmount] = useState()
-  const [convertedAmount, setConvertedAmount] = useState()
+  const [amount, setAmount] = useState(0)
+  const [convertedAmount, setConvertedAmount] = useState(0)
   const [from, setFrom] = useState('usd')
   const [to, setTo] = useState('inr')
 
@@ -15,12 +15,7 @@ function App() {
   const options = Object.keys(currencyInfo)
   
   const convert = () => {
-    if (amount && currencyInfo[to]) {
     setConvertedAmount(amount * currencyInfo[to])
-    }
-    else {
-      setConvertedAmount(null); // Handle case where the conversion rate is unavailable
-    }
   }
 
   const swap = () => {

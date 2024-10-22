@@ -21,7 +21,7 @@ function inputdiv({
       <div className='flex flex-wrap justify-between'>
         <input id="currency" type="number"
         placeholder="Enter amount"
-        value={amount}
+        value={amount || 0}
         disabled={amountDisabled}
         onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
         />
